@@ -55,18 +55,44 @@ body {
   margin: 0 auto;
 }
 
+.logo {
+  color: var(--color-brand);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.logo__header {
+  padding: 24px 0;
+}
+
+.logo__footer {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.logo__text-header {
+  color: var(--text-color-black);
+}
+
+.logo__text-footer {
+  color: var(--text-color-white);
+}
+
 header {
   border-bottom: 1px solid #ececec;
 }
 
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 308px;
 }
 
-.header-nav {
+.header__nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -74,14 +100,53 @@ header {
   gap: 93px;
 }
 
-.header-menu {
+.header__menu {
   display: flex;
   gap: 50px;
 }
 
-.header-contact {
+.header__contact {
   display: flex;
   gap: 40px;
+}
+
+.header__link-menu {
+  position: relative;
+  padding: 32px 0;
+  color: var(--text-color-primary);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.header__link-menu--current {
+  color: var(--color-brand);
+}
+
+.header__link-menu--current::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-brand);
+  border-radius: 2px;
+  content: "";
+}
+
+.header__link-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 32px 0;
+  fill: var(--text-color-secondary);
+  color: var(--text-color-secondary);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
 }
 
 .section {
@@ -102,7 +167,7 @@ header {
   text-align: center;
 }
 
-.hero-title {
+.hero-section__title {
   margin-bottom: 40px;
   color: var(--text-color-white);
   text-transform: uppercase;
@@ -148,14 +213,14 @@ header {
   clip: rect(0 0 0 0);
 }
 
-.advantage-title {
+.advantage-section__card-title {
   margin-bottom: 10px;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.2;
 }
 
-.advantage-icon {
+.advantage-section__icon {
   display: flex;
   width: 270px;
   height: 120px;
@@ -166,12 +231,12 @@ header {
   background-color: var(--background-color-brand-secondary);
 }
 
-.advantage-list {
+.advantage-section__list {
   display: flex;
   gap: 30px;
 }
 
-.advantage-text {
+.advantage-section__card-text {
   margin-bottom: 0;
   font-size: 14px;
   line-height: 1.7;
@@ -182,16 +247,16 @@ header {
   padding: 94px 0;
 }
 
-.product-list {
+.product-section__list {
   display: flex;
   gap: 30px;
 }
 
-.product-list > li {
+.product-section__list > li {
   position: relative;
 }
 
-.product-text {
+.product-section__text {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -219,12 +284,12 @@ header {
   background-color: var(--background-color-brand-secondary);
 }
 
-.team-section-list {
+.team-section__container {
   display: flex;
   gap: 30px;
 }
 
-.team-list {
+.team-section__member {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -232,20 +297,20 @@ header {
   background-color: var(--background-color-white);
 }
 
-.team-member {
+.team-section__member-container {
   display: inline-block;
   padding: 30px 0;
   justify-content: center;
 }
 
-.name {
+.team-section__member-name {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
 }
 
-.profession {
+.team-section__member-profession {
   margin-bottom: 16;
   font-size: 16px;
   line-height: 1.2;
@@ -256,12 +321,12 @@ header {
   padding: 94px 0;
 }
 
-.clients-section-list {
+.clients-section__list {
   display: flex;
   gap: 30px;
 }
 
-.clients-icon-link {
+.clients-section__icon {
   display: flex;
   width: 170px;
   height: 92px;
@@ -275,14 +340,14 @@ header {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-icon-link:hover,
-.clients-icon-link:focus,
-.clients-icon-link:active {
+.clients-section__icon:hover,
+.clients-section__icon:focus,
+.clients-section__icon:active {
   fill: var(--color-brand);
   border-color: var(--color-brand);
 }
 
-.social-links-title {
+.social-links__title {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -291,12 +356,12 @@ header {
   color: var(--text-color-white);
 }
 
-.social-links-list {
+.social-links {
   display: flex;
   gap: 10px;
 }
 
-.social-links-icon {
+.social-links__icon {
   display: flex;
   width: 44px;
   height: 44px;
@@ -308,69 +373,69 @@ header {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-links-icon:hover,
-.social-links-icon:focus,
-.social-links-icon:active {
+.social-links__icon:hover,
+.social-links__icon:focus,
+.social-links__icon:active {
   fill: var(--text-color-white);
   background-color: var(--color-brand);
 }
 
-.footer-social-links-icon {
+.social-links__icon-footer {
   fill: var(--text-color-white);
   background: rgba(255, 255, 255, 0.1);
 }
 
-.portfolio-menu {
+.portfolio__menu {
   display: flex;
   justify-content: center;
   gap: 8px;
   margin-bottom: 50px;
 }
 
-.portfolio-list {
+.portfolio__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.portfolio-name {
+.portfolio-card__name {
   margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 
-.portfolio-type {
+.portfolio-card__type {
   margin-bottom: 0;
   font-size: 16px;
   line-height: 1.9;
   color: var(--text-color-primary);
 }
 
-.portfolio-description {
+.portfolio-card__description {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
 }
 
-.portfolio-link {
+.portfolio-card__link {
   display: block;
   text-decoration: none;
   color: inherit;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-link:hover,
-.portfolio-link:focus,
-.portfolio-link:active {
+.portfolio-card__link:hover,
+.portfolio-card__link:focus,
+.portfolio-card__link:active {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.portfolio-overlay-box {
+.portfolio-card__overlay-box {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-overlay {
+.portfolio-card__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -386,11 +451,11 @@ header {
   padding: 63px 24px;
 }
 
-.portfolio-link:hover .portfolio-overlay {
+.portfolio-card__link:hover .portfolio-card__overlay {
   transform: translateY(0);
 }
 
-.filter-button {
+.portfolio__filter-button {
   padding: 6px 22px;
   border-radius: 4px;
   background-color: var(--background-color-brand-secondary);
@@ -405,9 +470,9 @@ header {
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-button:hover,
-.filter-button:focus,
-.filter-button:active {
+.portfolio__filter-button:hover,
+.portfolio__filter-button:focus,
+.portfolio__filter-button:active {
   background-color: var(--color-brand);
   color: var(--text-color-white);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -427,8 +492,7 @@ header {
   color: var(--color-brand);
 }
 
-.link-logo-header {
-  padding: 24px 0;
+.logo {
   color: var(--color-brand);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -437,15 +501,24 @@ header {
   text-decoration: none;
 }
 
-.logo-header {
+.logo__header {
+  padding: 24px 0;
+}
+
+.logo__footer {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.logo__text-header {
   color: var(--text-color-black);
 }
 
-.logo-footer {
+.logo__text-footer {
   color: var(--text-color-white);
 }
 
-.link-nav {
+.header__link-menu {
   position: relative;
   padding: 32px 0;
   color: var(--text-color-primary);
@@ -455,11 +528,11 @@ header {
   letter-spacing: 0.02em;
 }
 
-.link-nav.current {
+.header__link-menu--current {
   color: var(--color-brand);
 }
 
-.link-nav.current::after {
+.header__link-menu--current::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -470,7 +543,7 @@ header {
   content: "";
 }
 
-.link-contact-header {
+.header__link-contact {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -484,11 +557,27 @@ header {
   letter-spacing: 0.02em;
 }
 
-.footer-list:not(:last-child) {
+li {
+  list-style-type: none;
+}
+
+.footer {
+  padding: 60px 0;
+  background-color: var(--background-color-brand-primary);
+}
+
+.footer__container {
+  position: relative;
+  display: flex;
+  gap: 70px;
+  align-items: baseline;
+}
+
+.footer__list:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.link-contact-footer {
+.footer__contact {
   display: inline-block;
   color: var(--text-color-white);
   opacity: 60%;
@@ -497,39 +586,12 @@ header {
   font-style: normal;
 }
 
-.link-address-footer {
+.footer__address {
   display: inline-block;
   color: var(--text-color-white);
   font-size: 14px;
   line-height: 1.7;
   font-style: normal;
-}
-
-li {
-  list-style-type: none;
-}
-
-footer {
-  padding: 60px 0;
-  background-color: var(--background-color-brand-primary);
-}
-
-.footer-container {
-  position: relative;
-  display: flex;
-  gap: 70px;
-  align-items: baseline;
-}
-
-.link-logo-footer {
-  display: inline-block;
-  margin-bottom: 20px;
-  color: var(--color-brand);
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  text-decoration: none;
 }
 
 .subscription {
@@ -538,7 +600,7 @@ footer {
   top: 12px;
 }
 
-.subscription-title {
+.subscription__title {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -547,11 +609,11 @@ footer {
   color: var(--text-color-white);
 }
 
-.subscription-form {
+.subscription__form {
   display: flex;
 }
 
-.form-subscription-input {
+.subscription__form-input {
   width: 358px;
   height: 50px;
   padding: 0 16px;
@@ -563,13 +625,13 @@ footer {
   outline: none;
 }
 
-.form-subscription-input::placeholder {
+.subscription__form-input::placeholder {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.subscription-submit {
+.subscription__submit {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -608,7 +670,7 @@ footer {
   padding: 20px 0;
 }
 
-.modal-conteiner {
+.modal__conteiner {
   position: relative;
   padding: 40px;
   border-radius: 4px;
@@ -621,7 +683,7 @@ footer {
   overflow: auto;
 }
 
-.form-title {
+.modal__title {
   margin-bottom: 12px;
   text-align: center;
   font-weight: 700;
@@ -630,7 +692,7 @@ footer {
   color: var(--text-color-primary);
 }
 
-.form-field-label {
+.form__label {
   display: block;
   margin-bottom: 4px;
   font-size: 12px;
@@ -638,7 +700,7 @@ footer {
   color: var(--text-color-secondary);
 }
 
-.form-field-input {
+.form__field-input {
   width: 100%;
   height: 40px;
   padding: 0 10px 0 42px;
@@ -649,7 +711,7 @@ footer {
   cursor: pointer;
 }
 
-.form-field-textarea {
+.form__field-textarea {
   width: 100%;
   height: 120px;
   resize: none;
@@ -662,19 +724,19 @@ footer {
   cursor: pointer;
 }
 
-.form-field-textarea::placeholder {
+.form__field-textarea::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-field {
+.form__field {
   position: relative;
   margin-bottom: 10px;
 }
 
-.form-field-icon {
+.form__field-icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -683,18 +745,18 @@ footer {
   cursor: pointer;
 }
 
-.checkbox {
+.form__checkbox {
   display: flex;
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.71;
 }
 
-.checkbox-input {
+.form__checkbox-input {
   appearance: none;
 }
 
-.checkbox-icon {
+.form__checkbox-icon {
   position: absolute;
   margin: 4px 7px 0 12px;
   border: 2px solid var(--text-color-primary);
@@ -702,40 +764,40 @@ footer {
   fill: transparent;
 }
 
-.checkbox-input:checked + .checkbox-icon {
+.form__checkbox-input:checked + .form__checkbox-icon {
   border-color: var(--color-brand);
   fill: var(--text-color-white);
   background-color: var(--color-brand);
 }
 
-.checkbox-label {
+.form__checkbox-label {
   position: relative;
   left: 12px;
   padding-left: 23px;
   color: var(--text-color-secondary);
 }
 
-.test {
+/* .test {
   position: absolute;
   left: 52px;
-}
+} */
 
-.agreement-link {
+.form__agreement-link {
   color: var(--color-brand);
 }
 
-.form-submit {
+.form__submit {
   display: block;
   margin: 0 auto;
   width: 200px;
 }
 
-.form-field-input:focus,
-.form-field-textarea:focus {
+.form__field-input:focus,
+.form__field-textarea:focus {
   border-color: var(--color-brand);
 }
 
-.form-field-input:focus + .form-field-icon {
+.form__field-input:focus + .form__field-icon {
   fill: var(--color-brand);
 }
 
@@ -747,10 +809,7 @@ footer {
   transition-duration: 500ms;
 }
 
-.modal-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+.button-close {
   width: 30px;
   height: 30px;
   padding: 5px;
@@ -761,8 +820,14 @@ footer {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close:hover,
-.modal-close:focus,
-.modal-close:active {
+.modal__button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.button-close:hover,
+.button-close:focus,
+.button-close:active {
   fill: var(--color-brand);
 }
